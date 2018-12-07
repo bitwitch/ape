@@ -13,13 +13,15 @@ const (
 
 	// operators
 	ASSIGN   = "="
+	BANG     = "!"
 	PLUS     = "+"
 	MINUS    = "-"
 	ASTERISK = "*"
-	BANG     = "!"
 	SLASH    = "/"
 	LT       = "<"
 	GT       = ">"
+	EQ       = "=="
+	NOT_EQ   = "!="
 
 	// delimiters
 	SEMICOLON = ";"
