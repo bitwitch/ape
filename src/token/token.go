@@ -11,10 +11,6 @@ const (
 	ILLEGAL = "ILLEGAL"
 	EOF     = "EOF"
 
-	// identifiers + literals
-	IDENT = "IDENT"
-	INT   = "INT"
-
 	// operators
 	ASSIGN   = "="
 	PLUS     = "+"
@@ -26,8 +22,8 @@ const (
 	GT       = ">"
 
 	// delimiters
-	COMMA     = ","
 	SEMICOLON = ";"
+	COMMA     = ","
 	LPAREN    = "("
 	RPAREN    = ")"
 	LBRACE    = "{"
@@ -36,11 +32,25 @@ const (
 	// keywords
 	FUNCTION = "FUNCTION"
 	LET      = "LET"
+	IF       = "IF"
+	ELSE     = "ELSE"
+	TRUE     = "TRUE"
+	FALSE    = "FALSE"
+	RETURN   = "RETURN"
+
+	// identifiers + literals
+	IDENT = "IDENT"
+	INT   = "INT"
 )
 
 var keywords = map[string]TokenType{
-	"fn":  FUNCTION,
-	"let": LET,
+	"fn":     FUNCTION,
+	"let":    LET,
+	"if":     IF,
+	"else":   ELSE,
+	"true":   TRUE,
+	"false":  FALSE,
+	"return": RETURN,
 }
 
 // LookupIdent : checks if indent is a keyword or user defined identifier
