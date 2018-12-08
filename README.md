@@ -1,4 +1,4 @@
-# Interpreter for the Ape programming language
+# The Ape programming language
 
 Based on and essentially equivalent to [Thorsten Ball's](https://github.com/mrnugget) programming language, Monkey, from his book [Writing an Interpreter in Go](https://interpreterbook.com/).
 
