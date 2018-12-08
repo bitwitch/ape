@@ -1,6 +1,8 @@
 # Interpreter for the Ape programming language
 
-Based on and essentially equivalent to the Monkey programming language from [Thorsten Ball's](https://github.com/mrnugget) book [Writing an Interpreter in Go](https://interpreterbook.com/).
+Based on and essentially equivalent to [Thorsten Ball's](https://github.com/mrnugget) programming language, Monkey, from his book [Writing an Interpreter in Go](https://interpreterbook.com/).
 
 Planned modifications: 
-- Full Unicode UTF-8 support
+- Unicode UTF-8 support
+- Float type
+- Hex and octal int representations
