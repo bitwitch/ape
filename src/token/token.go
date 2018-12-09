@@ -33,7 +33,7 @@ const (
 
 	// keywords
 	FUNCTION = "FUNCTION"
-	LET      = "LET"
+	VAR      = "VAR"
 	IF       = "IF"
 	ELSE     = "ELSE"
 	TRUE     = "TRUE"
@@ -47,7 +47,7 @@ const (
 
 var keywords = map[string]TokenType{
 	"fn":     FUNCTION,
-	"let":    LET,
+	"var":    VAR,
 	"if":     IF,
 	"else":   ELSE,
 	"true":   TRUE,
