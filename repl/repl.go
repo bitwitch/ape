@@ -3,9 +3,9 @@ package repl
 import (
 	"bufio"
 	"fmt"
+	"github.com/bitwitch/ape/lexer"
+	"github.com/bitwitch/ape/token"
 	"io"
-	"lexer"
-	"token"
 )
 
 const PROMPT = ">>$ "

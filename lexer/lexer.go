@@ -1,6 +1,6 @@
 package lexer
 
-import "token"
+import "github.com/bitwitch/ape/token"
 
 // Lexer type
 type Lexer struct {

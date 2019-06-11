@@ -2,9 +2,9 @@ package main
 
 import (
 	"fmt"
+	"github.com/bitwitch/ape/repl"
 	"os"
 	"os/user"
-	"repl"
 )
 
 func main() {
