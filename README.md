@@ -6,3 +6,4 @@ Planned modifications:
 - Unicode UTF-8 support
 - Float type
 - Hex and octal int representations
+- Storing line number and column position in tokens during lexing
