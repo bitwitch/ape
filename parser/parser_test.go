@@ -6,10 +6,39 @@ import (
 	"testing"
 )
 
+func TestReturnStatements(t *testing.T) {
+	input := `return 5;
+return 10;
+return 89273049;`
+
+	l := lexer.New(input)
+	p := New(l)
+
+	program := p.ParseProgram()
+	checkParserErrors(t, p)
+
+	if len(program.Statements) != 3 {
+		t.Fatalf("program.Statements does not conatin 3 statements. got=%d",
+			len(program.Statements))
+	}
+
+	for _, stmt := range program.Statements {
+		returnStmt, ok := stmt.(*ast.ReturnStatement)
+		if !ok {
+			t.Errorf("stmt not *ast.returnStatement. got=%T", returnStmt)
+			continue
+		}
+		if returnStmt.TokenLiteral() != "return" {
+			t.Errorf("returnStmt.TokenLiteral no 'return', got=%q",
+				returnStmt.TokenLiteral())
+		}
+	}
+}
+
 func TestVarStatements(t *testing.T) {
-	input := ` var x 5;
-var = 10;
-var 89273049;`
+	input := ` var x = 5;
+var haxor = 1337;
+var toots = 89273049;`
 
 	l := lexer.New(input)
 	p := New(l)
@@ -29,8 +58,8 @@ var 89273049;`
 		expectedIdentifier string
 	}{
 		{"x"},
-		{"y"},
-		{"foobar"},
+		{"haxor"},
+		{"toots"},
 	}
 
 	for i, tt := range tests {
